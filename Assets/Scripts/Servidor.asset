@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d36856ba003caff409a176d6ad225c1b, type: 3}
+  m_Name: Servidor
+  m_EditorClassIdentifier: 
+  servidor: http://localhost/Game
+  servicios:
+  - nombre: login
+    URL: checkUser.php
+    parametros:
+    - usuario
+    - pass
+  - nombre: Registro
+    URL: createUser.php
+    parametros:
+    - usuario
+    - pass
+  - nombre: Estadistica
+    URL: stadistics.php
+    parametros:
+    - usuario
+  username: 
+  ocupado: 0
+  respuesta:
+    codigo: 0
+    mensaje: 
+    respuesta:
+      idPartida: 0
+      usuario: 
+      equipo: 
+      duracion: 
+      dificultad: 
+      ganado: 0
+  estadistica:
+    idPartida: 0
+    usuario: 
+    equipo: 
+    duracion: 
+    dificultad: 
+    ganado: 0
