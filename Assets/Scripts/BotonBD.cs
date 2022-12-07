@@ -6,7 +6,7 @@ public class BotonBD : MonoBehaviour
 {
 
 
-    public NavMeshController NP;
+    public NavMeshController NP; //Creacion de NavMeshController NP
     // Start is called before the first frame update
     void Start()
     {
@@ -19,19 +19,19 @@ public class BotonBD : MonoBehaviour
         
     }
 
-    private void OnMouseDown(){
-        Debug.Log("OnMouseDown: "+ this.name);
-        NP = FindObjectOfType<NavMeshController>();
-        if(this.name == "Boton BD"){
-            NP.BDSearch();
+    private void OnMouseDown(){ //Función para cuando se presionan los respectivos botones del NPC.
+        Debug.Log("OnMouseDown: "+ this.name); //Menciona en consola cual boton se presiono.
+        NP = FindObjectOfType<NavMeshController>(); //NP encontrara dentro del Área de Trabajo, NavMeshController
+        if(this.name == "Boton BD"){ //Condicional para cuando se presiono el botón de Base de Datos
+            NP.BDSearch(); //Ejecutar Función BDSearch().
         }
         else{
-            if(this.name == "Boton Lenguaje"){
-                NP.LengaugeSearch();
+            if(this.name == "Boton Lenguaje"){ //Condicional para cuando se presiona el botón de Lenguaje
+                NP.LengaugeSearch(); //Ejecutar Función LenguageSearch().
             }
             else{
-                if(this.name == "Boton Plataforma"){
-                    NP.PlatformSearch();
+                if(this.name == "Boton Plataforma"){ //Condicional para cuando se presiona el botón de Plataforma
+                    NP.PlatformSearch(); //Ejectuar Función PlatformSearch().
                 }
             }
         }
